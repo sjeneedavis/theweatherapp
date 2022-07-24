@@ -30,7 +30,8 @@ let dateElement= document.querySelector("#date");
 }
 
 let apiKey= "15fc459ac3739d95955d19e57ff4d582";
-let apiUrl= `https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=${apiKey}&units=metric`;
+let city= "Grand Rapids"
+let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
 
