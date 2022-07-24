@@ -16,18 +16,25 @@
   <body>
     <div class="container">
         <div class="weather-app">
+            <div class="overview">
       <h1>Grand Rapids, MI</h1>
       <ul>
         <li>Saturday 15:30</li>
         <li>Clear</li>
       </ul>
+    </div>
       <div class="row">
         <div class="col-6">
+            <div class="clearfix weather-temperature">
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-            alt="Clear" width="100" height="100"
+            alt="Clear"class="float-left" 
           />
-          12°C | °F
+          <div class="float-left">
+          <strong>12</strong>
+          <span class="units"> °C | <a href="#">°F</a> </span>
+          </div>
+        </div>
       </div>
     <div class="col-6">
       <ul>
@@ -38,11 +45,13 @@
       </ul>
     </div>
 </div>
+
+</div>
 <small>
     <a href="https://github.com/sjeneedavis/theweatherapp" target="_blank">Open Source code</a>  by: Shelby Davis
 </small>
 </div>
-</div>
+
     <script src="src/app.js"></script>
   </body>
 </html>
