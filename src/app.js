@@ -32,10 +32,19 @@ let iconElement= document.querySelector("#icon");
     iconElement.setAttribute("alt", response.data.weather[0].description )
 }
 
+function search(city) {
 let apiKey= "15fc459ac3739d95955d19e57ff4d582";
-let city= "Grand Rapids"
 let apiUrl= `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
 axios.get(apiUrl).then(displayTemperature);
+}
 
+function handleSubmit(event){
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#city-input");
+    search(cityInputElement.value);
+}
 
+search("New York");
+
+let form=document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
